@@ -1,0 +1,8 @@
+body,html{padding:0;margin:0;}
+#wrap{width:100%;}
+#index{width:100%;height:832px;background:#ffffff url(../img/bg.png) no-repeat center top;}
+#avabar{position:fixed;bottom:-5px;left:0;}#avabar img{opacity:0;margin:0;padding:0;border:none;}
+#jp-index{margin:0 auto;width:220px;padding-top:380px;}#jp-index #jp-theme{font-size:24px;}#jp-index #jp-theme #play{cursor:pointer;width:30px;}
+#jp-index #jp-theme #pause{cursor:pointer;width:15px;}
+#jp-index #jp-theme #song{color:#00a1e9;width:160px;text-align:center;}
+#jp-index #jp-theme span{display:inline-block;overflow:hidden;}

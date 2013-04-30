@@ -1,0 +1,52 @@
+@theme: #00a1e9;
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+#wrap {
+    width: 100%;
+}
+#index {
+    width: 100%;
+    height: 832px;
+    background: #fff url(../img/bg.png) no-repeat center top;
+}
+
+#avabar {
+    position: fixed;
+    bottom: -5px;
+    left: 0;
+    img {
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+    }
+}
+
+#jp-index {
+    margin: 0 auto;
+    width: 220px;
+    padding-top: 380px;
+    #jp-theme {
+	font-size: 24px;
+	#play {
+	    cursor: pointer;
+	    width: 30px;
+	}
+	#pause {
+	    cursor: pointer;
+	    width: 15px;
+	}
+	#song {
+	    color: @theme;
+	    width: 160px;
+	    text-align: center;
+	}
+	span {
+	    display: inline-block;
+	    overflow: hidden;
+	}
+    }
+}
