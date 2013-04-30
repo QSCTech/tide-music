@@ -14,7 +14,7 @@ ul, li {
     list-style:none;
 }
 #wrap {
-    margin: 20px auto;
+    margin: 40px auto;
     width: 960px;
 }
 
@@ -92,9 +92,10 @@ ul, li {
     }
 }
 .item {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 24px;
     text-align: center;
+    overflow: hidden;
     .title {
 	letter-spacing: 24px;
 	line-height: 40px;
@@ -114,9 +115,56 @@ ul, li {
 	}
     }
     .content {
-	margin: 20px 0 30px 0;
+	margin-top: 24px;
 	background: #eee;
-	width: 100%;
-	height: 400px;
+	width: 670px;
+	height: 24px * 16;
+    }
+}
+
+#interview {
+    .content {
+	width: 670px - 24*2;
+	border: 24px solid transparent;
+	text-align: left;
+	font-size: 14px;
+	line-height: 24px;
+	height: auto;
+    }
+    strong {
+	font-weight: bold;
+    }
+}
+
+#more {
+    font-size: 14px;
+    text-align: right;
+    color: #8a8a8a;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+#photo {
+    img {
+	width: 670px;
+    }
+    .content {
+	text-align: right;
+	height: auto;
+	.img-pointer {
+	    height: 28px;
+	    margin-top: -30px;
+	    span {
+		display: inline-block;
+		width: 36px;
+		text-align: center;
+		background: #000;
+		opacity: .5;
+		color: #fff;
+		border-left: 1px solid #fff;
+		border-top: 1px solid #fff;
+		cursor: pointer;
+	    }
+	}
     }
 }

@@ -1,16 +1,18 @@
+@import 'comm';
 @theme: #00a1e9;
 
 body, html {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
+
 #wrap {
     width: 100%;
 }
 #index {
     width: 100%;
     height: 832px;
-    background: #fff url(../img/bg.png) no-repeat center top;
 }
 
 #avabar {
@@ -29,24 +31,13 @@ body, html {
     margin: 0 auto;
     width: 220px;
     padding-top: 380px;
-    #jp-theme {
-	font-size: 24px;
-	#play {
-	    cursor: pointer;
-	    width: 30px;
-	}
-	#pause {
-	    cursor: pointer;
-	    width: 15px;
-	}
-	#song {
-	    color: @theme;
-	    width: 130px;
-	    text-align: center;
-	}
-	span {
-	    display: inline-block;
-	    overflow: hidden;
-	}
-    }
+}
+
+#player {
+    position: fixed;
+    z-index: 200;
+    left: 50%;
+    top: 0;
+    margin-left: -115px;
+    background: #ffe5e5;
 }

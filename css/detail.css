@@ -15,7 +15,7 @@ a{text-decoration:none;}a:focus,a:hover,a:active{outline:none;}
 body{background:#f7f7f7;}
 a{text-decoration:none;}
 ul,li{list-style:none;}
-#wrap{margin:20px auto;width:960px;}
+#wrap{margin:40px auto;width:960px;}
 #ava{background:#daf4ff;width:200px;padding:15px;}
 #ava-img img{width:200px;}
 #ava-name{font-size:24px;color:#3780a1;}
@@ -26,6 +26,11 @@ ul,li{list-style:none;}
 #topbar{background:#333;height:36px;width:100%;font-size:12px;}#topbar ul{width:960px;margin:0 auto;}
 #topbar li{float:left;margin:12px;}#topbar li:first-child{padding-right:24px;margin-right:12px;border-right:2px solid #eee;}
 #topbar a{color:#eee;}#topbar a:hover{border-bottom:2px solid #eee;}
-.item{margin-bottom:20px;font-size:24px;text-align:center;}.item .title{letter-spacing:24px;line-height:40px;padding-left:34px;background:#d5d5d5;color:#555;width:150px;}.item .title .t{float:left;}
+.item{margin-bottom:50px;font-size:24px;text-align:center;overflow:hidden;}.item .title{letter-spacing:24px;line-height:40px;padding-left:34px;background:#d5d5d5;color:#555;width:150px;}.item .title .t{float:left;}
 .item .title .d{float:right;width:0;height:0;border:20px solid #fff;border-color:#f7f7f7 #f7f7f7 #f7f7f7 #d5d5d5;}
-.item .content{margin:20px 0 30px 0;background:#eee;width:100%;height:400px;}
+.item .content{margin-top:24px;background:#eee;width:670px;height:384px;}
+#interview .content{width:622px;border:24px solid transparent;text-align:left;font-size:14px;line-height:24px;height:auto;}
+#interview strong{font-weight:bold;}
+#more{font-size:14px;text-align:right;color:#8a8a8a;padding-right:12px;cursor:pointer;}
+#photo img{width:670px;}
+#photo .content{text-align:right;height:auto;}#photo .content .img-pointer{height:28px;margin-top:-30px;}#photo .content .img-pointer span{display:inline-block;width:36px;text-align:center;background:#000;opacity:.5;color:#fff;border-left:1px solid #fff;border-top:1px solid #fff;cursor:pointer;}

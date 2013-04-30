@@ -42,8 +42,34 @@ if (window.addEventListener){
 }
 
 function updateWidth() {
-    var width = $(window).width();
-    width /= 6;
-    $('#avabar img').css({width: width});
+    var width = $(window).width(),
+        height = $(window).height(),
+        scale = width / height,
+        w = width /6,
+        bgScale = 1600 / 832;
+
+    if(scale < bgScale) {
+        $('#bg').css({width: 'auto', height: height});
+        var bgWidth = $('#bg').width();
+        var leftOffset = (bgWidth - width) / 2 * -1;
+        $('#bg').css({position: 'absolute', left: leftOffset});
+    } else {
+        $('#bg').css({width: width, height: 'auto', left: 0});
+    }
+
+    $('#avabar img').css({width: w});
+
+
+    if(width < 1200) {
+        $('#player').css({width: '60px', height: '18px', 'margin-left': '-40px'});
+    } else {
+        $('#player').css({width: '210px', height: '18px', 'margin-left': '-115px'});
+    }
+
+    setTimeout(function() {
+        var bgHeight = $('#bg').height();
+        var playerOffset = 375 / 832 * bgHeight;
+        $('#player').css({top: playerOffset});
+    }, 20);
 }
 updateWidth();
