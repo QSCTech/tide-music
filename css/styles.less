@@ -1,4 +1,5 @@
 @import 'comm';
+@import 'reset';
 @theme: #00a1e9;
 
 body, html {
@@ -19,11 +20,15 @@ body, html {
     position: fixed;
     bottom: -5px;
     left: 0;
+    li {
+	float: left;
+    }
     img {
-	opacity: 0;
+	opacity: .3;
 	margin: 0;
 	padding: 0;
 	border: none;
+	cursor: pointer;
     }
 }
 
@@ -35,9 +40,11 @@ body, html {
 
 #player {
     position: fixed;
+    overflow: hidden;
     z-index: 200;
     left: 50%;
     top: 0;
     margin-left: -115px;
     background: #ffe5e5;
+    color: @theme;
 }

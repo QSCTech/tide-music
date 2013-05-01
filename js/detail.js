@@ -91,34 +91,49 @@ var getMusic = function() {
     return music;
 };
 
+var musics = [];
+for(var i=0; i<item.music.length; i++) {
+    var music = item.music[i];
+    musics.push('data/'+hash+'/music/'+music+'.mp3');
+}
+if(typeof isIe != "undefined") {
+    var urls = musics.join('|');
+    var html = '<object type="application/x-shockwave-flash" data="flash/dewplayer-multi.swf" width="240" height="20" id="dewplayermulti" name="dewplayermulti"><param name="movie" value="flash/dewplayer-multi.swf" /><param name="flashvars" value="mp3='+urls+'" /></object>';
+    $('#player').html(html);
+    $('#player').css('background', 'transparent');
+    setInterval(function() {
+        $('#player').css({width: '270px', 'margin-left': '-20px'});
+    }, 50);
+} else {
+    $("#jp").jPlayer({
+        ready: function() {
+            $(this).jPlayer("setMedia", {
+                mp3: getMusic()
+            }).jPlayer("play");
+        },
+        ended: function() {
+            $(this).jPlayer("setMedia", {
+                mp3: getMusic()
+            }).jPlayer("play");
+        },
+        swfPath: "http://app.myqsc.com/Public/jPlayer",
+        supplied: "mp3"
+    });
 
-$("#jp").jPlayer({
-    ready: function() {
-        $(this).jPlayer("setMedia", {
+    $('#next').click(function() {
+        $("#jp").jPlayer("setMedia", {
             mp3: getMusic()
         }).jPlayer("play");
-    },
-    ended: function() {
-        $(this).jPlayer("setMedia", {
-            mp3: getMusic()
-        }).jPlayer("play");
-    },
-    supplied: "mp3"
-});
+    });
 
-$('#next').click(function() {
-    $("#jp").jPlayer("setMedia", {
-        mp3: getMusic()
-    }).jPlayer("play");
-});
-
-$('#play').click(function() {
-    $(this).css({display: 'none'});
-    $('#pause').css({display: 'inline-block'});
-    $("#jp").jPlayer("play");
-});
-$('#pause').click(function() {
-    $(this).css({display: 'none'});
-    $('#play').css({display: 'inline-block'});
-    $("#jp").jPlayer("pause");
-});
+    $('#play').click(function() {
+        $(this).css({display: 'none'});
+        $('#pause').css({display: 'inline-block'});
+        $("#jp").jPlayer("play");
+    });
+    $('#pause').click(function() {
+        $(this).css({display: 'none'});
+        $('#play').css({display: 'inline-block'});
+        $("#jp").jPlayer("pause");
+    });
+}
