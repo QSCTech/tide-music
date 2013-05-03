@@ -28,9 +28,13 @@ var data = {
         name: "启真湖没名团",
         img: 12,
         music: ["03压青草", "爱人别为我轻轻地哭泣", "给远方的你", "我只是害怕青春的逝去"],
+        summary: '如果生命重获信仰<br>是否变了样<br>尽情奔放挥霍闯荡<br>死在沙滩上<br>和浪花一样<br><br>去追逐希望<br>悼青春哀伤<br>放生命去闯',
         video: '',
         links: [
-
+          {
+              name: "豆瓣小站",
+              link: "http://site.douban.com/qizhenlake/"
+          }
         ]
     },
     sodda: {
@@ -43,11 +47,24 @@ var data = {
     },
     smi: {
         name: "李嘉宁",
-        summary: '',
+        summary: '没有人念想<br>不再有不安的心脏<br>没有人念想<br>空空的心脏<br><br>日子快到头了<br>他们都不见了<br>每个人去自己的未来<br>',
         img: 5,
         music: ["般若", "沉没", "愁云", "光", "杭州", "每个人去自己的未来"],
         video: 'http://tide.myqsc.com/static/media/video/20130501.mp4',
-        links: []
+        links: [
+          {
+              name: "豆瓣",
+              link: "http://www.douban.com/people/SmileyLee/"
+          },
+          {
+              name: "豆瓣小站",
+              link: "http://site.douban.com/smi/"
+          },
+          {
+              name: "LOFTER",
+              link: "http://smi-design.lofter.com/"
+          }
+        ]
     }
 };
 

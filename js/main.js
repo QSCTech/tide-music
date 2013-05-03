@@ -4,8 +4,24 @@ var musics = [
       url: 'data/lianlian/music/Play.mp3'
   },
   {
-      name: 'Siberia',
-      url: 'data/lianlian/music/Siberia.mp3'
+      name: '每个人去自己的未来',
+      url: 'data/smi/music/每个人去自己的未来.mp3'
+  },
+  {
+      name: '光',
+      url: 'data/smi/music/光.mp3'
+  },
+  {
+      name: '压青草',
+      url: 'data/qzh/music/03压青草.mp3'
+  },
+  {
+      name: '给远方的你',
+      url: 'data/qzh/music/给远方的你.mp3'
+  },
+  {
+      name: '我只是害怕青春的逝去',
+      url: 'data/qzh/music/我只是害怕青春的逝去.mp3'
   }
 ];
 
