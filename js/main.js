@@ -78,7 +78,7 @@ $("#avabar img").hover(
       $(this).animate({'opacity': 1});
   },
   function() {
-      $(this).animate({'opacity': '.3'});
+      $(this).animate({'opacity': '.5'});
   }
 );
 

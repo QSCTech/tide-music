@@ -15,6 +15,39 @@ var data = {
               link: "http://www.douban.com/people/4152962/"
           }
         ]
+    },
+    lgz: {
+        name: "卢广仲",
+        img: 2,
+        summary: '',
+        music: [],
+        video: '',
+        links: []
+    },
+    qzh: {
+        name: "启真湖没名团",
+        img: 12,
+        music: ["03压青草", "爱人别为我轻轻地哭泣", "给远方的你", "我只是害怕青春的逝去"],
+        video: '',
+        links: [
+
+        ]
+    },
+    sodda: {
+        name: "SODDA",
+        summary: '',
+        img: 2,
+        music: [],
+        video: '',
+        links: []
+    },
+    smi: {
+        name: "李嘉宁",
+        summary: '',
+        img: 5,
+        music: ["般若", "沉没", "愁云", "光", "杭州", "每个人去自己的未来"],
+        video: 'http://tide.myqsc.com/static/media/video/20130501.mp4',
+        links: []
     }
 };
 
@@ -26,6 +59,15 @@ var hash = window.location.hash.replace(/#/g, ''),
 
 if(!item.video) {
     $('#video').hide(0);
+} else {
+    jwplayer('mediaplayer').setup({
+        'flashplayer': 'http://www.qsc.zju.edu.cn/apps/video/jwplayer/player.swf',
+        'id': 'playerID',
+        'width': 670,
+        'height': 670/4*3,
+        'file': item.video,
+        'image': ''
+    });
 }
 
 $.get('data/'+hash+'/summary', function(data) {
@@ -62,7 +104,7 @@ $('#links ul').html(html);
 var imgs = item.img;
 var html2;
 for(i = 0, html = '', html2 = ''; i<imgs; i++) {
-//    html += '<img src="data/'+hash+'/img/'+i+'.jpg">';
+    //    html += '<img src="data/'+hash+'/img/'+i+'.jpg">';
     html2 += '<span>'+i+'</span>';
 }
 html = '<img src="data/'+hash+'/img/'+0+'.jpg">';
@@ -78,6 +120,10 @@ $('#photo .img-pointer span').click(function() {
 });
 
 // the music player
+
+if(item.music.length == 0) {
+    $('#player').hide();
+}
 
 var musicCount = 0;
 var getMusic = function() {
