@@ -51,6 +51,7 @@ var data = {
         img: 5,
         music: ["般若", "沉没", "愁云", "光", "杭州", "每个人去自己的未来"],
         video: 'http://tide.myqsc.com/static/media/video/20130501.mp4',
+//        video: 'http://localhost/tide2.mp4',
         links: [
           {
               name: "豆瓣",
@@ -81,7 +82,7 @@ if(!item.video) {
         'flashplayer': 'http://www.qsc.zju.edu.cn/apps/video/jwplayer/player.swf',
         'id': 'playerID',
         'width': 670,
-        'height': 670/4*3,
+        'height': 670/16*9,
         'file': item.video,
         'image': ''
     });

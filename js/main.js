@@ -110,7 +110,7 @@ function updateWidth() {
     var width = $(window).width(),
         height = $(window).height(),
         scale = width / height,
-        w = width /6,
+        w = width /6 - 1,
         bgScale = 1600 / 832;
 
     if(scale < bgScale) {
