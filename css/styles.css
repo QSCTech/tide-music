@@ -12,7 +12,7 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
 pre{white-space:pre-wrap;word-wrap:break-word;}
 a{text-decoration:none;}a:focus,a:hover,a:active{outline:none;}
-body,html{padding:0;margin:0;overflow:hidden;}
+body,html{padding:0;margin:0;overflow:hidden;font-family:"Hiragino Sans GB","ST Heiti","LiHei Pro Medium","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei";}
 #wrap{width:100%;}
 #index{width:100%;height:832px;}
 #avabar{position:fixed;bottom:-5px;left:0;width:100%;background:#fff;opacity:.8;}#avabar ul{margin:0 auto;}
