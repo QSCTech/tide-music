@@ -19,7 +19,7 @@ var data = {
     lgz: {
         name: "卢广仲",
         img: 2,
-        summary: '',
+        summary: '爱早餐的人生赢家<br>你的眼睛好像电影配乐<br>不踩脚踏车就没办法唱歌<br>嘿 你笑起来好像蜻蜓',
         music: [],
         video: '',
         links: []
