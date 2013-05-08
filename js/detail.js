@@ -201,6 +201,7 @@ if(typeof isIe != "undefined") {
                 mp3: getMusic()
             }).jPlayer("play");
         },
+        solution:"html",
         swfPath: "http://app.myqsc.com/Public/jPlayer",
         supplied: "mp3"
     });
