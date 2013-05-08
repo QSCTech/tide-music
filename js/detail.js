@@ -27,7 +27,7 @@ var data = {
     qzh: {
         name: "启真湖没名团",
         img: 12,
-        music: ["03压青草", "爱人别为我轻轻地哭泣", "给远方的你", "我只是害怕青春的逝去"],
+        music: ["为了那一天", "爱人别为我轻轻地哭泣", "给远方的你", "我只是害怕青春的逝去"],
         summary: '如果生命重获信仰<br>是否变了样<br>尽情奔放挥霍闯荡<br>死在沙滩上<br>和浪花一样<br><br>去追逐希望<br>悼青春哀伤<br>放生命去闯',
         video: '',
         links: [
@@ -38,7 +38,7 @@ var data = {
         ]
     },
     sodda: {
-        name: "SODDA",
+        name: "台湾校园音乐",
         summary: '',
         img: 2,
         music: [],
@@ -51,7 +51,7 @@ var data = {
         img: 5,
         music: ["般若", "沉没", "愁云", "光", "杭州", "每个人去自己的未来"],
         video: 'http://tide.myqsc.com/static/media/video/20130501.mp4',
-//        video: 'http://localhost/tide2.mp4',
+        //        video: 'http://localhost/tide2.mp4',
         links: [
           {
               name: "豆瓣",
@@ -65,6 +65,27 @@ var data = {
               name: "LOFTER",
               link: "http://smi-design.lofter.com/"
           }
+        ]
+    },
+    wx: {
+        name: "项庆琰, 王枢沛",
+        img: 2,
+        summary: '王枢沛<br><br>人生何处不相逢<br>却难忘 烟火下唱过的骊歌<br><br>项庆琰<br><br>过往是流淌着没有声音的河水<br>总是倒映原宥和自省<br>我在它疲惫的岸边徘徊了许久<br>想着 笑着 哭着 无法入睡<br>',
+        video: '',
+        music: ["项庆琰-秦皇岛","王枢沛-街边", "王枢沛-烟火", "王枢沛-追寻"],
+        links: [
+          {
+              name: "王枢沛's 5sing空间",
+              link: "http://www.5sing.com/17339323"
+          },
+          {
+              name: "王枢沛's 微博",
+              link: "@王枢沛"
+          },
+          {
+              name: "项庆琰's 微博",
+              link: "@氢弹啊"
+         }
         ]
     }
 };
@@ -201,3 +222,11 @@ if(typeof isIe != "undefined") {
         $("#jp").jPlayer("pause");
     });
 }
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $("#jp").jPlayer("setMedia", {
+            mp3: getMusic()
+        }).jPlayer("play");
+    }, 100);
+});

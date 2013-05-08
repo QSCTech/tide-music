@@ -12,8 +12,8 @@ var musics = [
       url: 'data/smi/music/光.mp3'
   },
   {
-      name: '压青草',
-      url: 'data/qzh/music/03压青草.mp3'
+      name: '为了那一天',
+      url: 'data/qzh/music/为了那一天.mp3'
   },
   {
       name: '给远方的你',
@@ -140,3 +140,11 @@ function updateWidth() {
     }, 20);
 }
 updateWidth();
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $("#jp").jPlayer("setMedia", {
+            mp3: getMusic()
+        }).jPlayer("play");
+    }, 100);
+});
