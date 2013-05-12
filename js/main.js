@@ -1,3 +1,8 @@
+var ua = window.navigator.userAgent;
+if(ua.indexOf('irefox') != -1) {
+    isIe = true;
+}
+
 var musics = [
   {
       name: 'Play',

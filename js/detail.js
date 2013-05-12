@@ -1,3 +1,9 @@
+var ua = window.navigator.userAgent;
+if(ua.indexOf('irefox') != -1) {
+    isIe = true;
+}
+
+
 var data = {
     lianlian: {
 	name: "连昱澎",
